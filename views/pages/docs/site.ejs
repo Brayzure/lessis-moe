@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../../partials/header %>
+</head>
+<body>
+<% include ../../partials/nav %>
+<aside>
+    <ul class="sidebar" style="padding: 10px; margin: 10px;">
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#process">Design Process</a></li>
+        <li><a href="#github">Github</a></li>
+    </ul>
+</aside>
+
+<h1>lessis.moe</h1>
+
+<section class="aside">
+    <h2 id="abstract">Abstract</h2>
+    <p>lessis.moe is simply my site where I host all of my projects. I initially created the web server so
+    I could have an online dashboard for one of my projects, and it just expanded from there. This site
+    houses documentation and information on every one of my projects, as well as some personal information.</p>
+
+    <h3>Stack</h3>
+    <ul>
+      <li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+      <li><a href="http://expressjs.com/" target="_blank">Express</a></li>
+      <li><a href="https://github.com/websockets/ws" target="_blank">ws</a></li>
+      <li><a href="http://ejs.co/" target="_blank">EJS</a></li>
+    </ul>
+
+  <h2 id="process">Design Process</h2>
+  <h4>Initial Version</h4>
+  <p>I started this web server with virtually no experience, so it took a considerable amount of time before
+  I actually had a functioning prototype. Its initial purpose was to host charts for the <a href="#">Tachyon</a>
+  project, and as expected it was buggy, had poor performance, and no CSS. But it worked, and I was incredibly
+  relieved. Expanding from its very basic roots, I explored what Express had to offer, and realized just how powerful
+  it was. Still very much a novice, I created a few endpoints, primarily to learn how it worked.</p>
+  <h4>Current Version</h4>
+  <p>Eventually, what I wanted out of my site could not be accommodated by my current code base, so I decided to take
+  what I had learned and start from scratch. There isn't a lot to explain: It's still in development, and the CSS
+  is in need of work (I'm not that great at front-end development), but it has the capability to easily expand to
+  whatever I need it to do.</p>
+
+  <h3 id="github"><a href="#">Github</a></h3>
+</section>
+
+<% include ../../partials/footer %>
+</body>
+</html>

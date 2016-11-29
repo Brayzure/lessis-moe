@@ -1,0 +1,24 @@
+{
+  "name": "lessismoe",
+  "version": "0.2.0",
+  "description": "",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brayzure/lessis-moe.git"
+  },
+  "author": "Brayzure (Tyler Ricketts)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brayzure/lessis-moe/issues"
+  },
+  "homepage": "lessis.moe",
+  "dependencies": {
+    "ejs": "^2.5.3",
+    "express": "^4.14.0",
+    "ws": "^1.1.1"
+  }
+}

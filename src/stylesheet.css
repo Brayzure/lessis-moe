@@ -1,0 +1,127 @@
+/*
+* Stylesheet for lessis.moe
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #333;
+    color: white;
+    text-decoration-color: #FCBD49;
+}
+
+ul {
+    margin-top: 0px;
+    list-style-type: none;
+}
+
+/* Top navbar */
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+li.nav {
+    float: left;
+}
+
+li.nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: #222;
+    border-right: 1px solid #FCBD49;
+}
+
+li.nav a:hover {
+    background-color: #333;
+}
+
+p.footer {
+    font-size: 12px;
+    text-align: center;
+}
+
+section {
+    width: 85%;
+    margin: auto;
+}
+
+section.aside {
+    width: 60%;
+    margin: 0px;
+    margin-left: 10%;
+}
+
+/* Side navbar */
+aside {
+    position: fixed;
+    right: 20px;
+    top: 48px;
+    width: 220px;
+    float: right;
+    border: 2px solid #222;
+    border-radius: 5px;
+}
+
+ul.sidebar {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.sidebar li {
+    padding-left: 1px;
+    text-indent: -0.7px;
+}
+
+ul.sidebar li:before {
+    content: "\002022 ";
+    color: #FCBD49;
+}
+
+ul.sidebar li a {
+    text-decoration: none;
+}
+
+code {
+    font-family: Lucida Console;
+    background-color: #444;
+    padding: 3px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #FCBD49;
+}
+
+h2 {
+    border-bottom-style: solid;
+    border-bottom-color: #FCBD49;
+}
+
+h3 {
+    color: #FCBD49;
+    margin-bottom: 3px;
+}
+
+h4 {
+    border-left-style: solid;
+    border-left-color: #FCBD49;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 3px;
+}

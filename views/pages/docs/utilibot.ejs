@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../../partials/header %>
+</head>
+<body>
+<% include ../../partials/nav %>
+<aside>
+    <ul class="sidebar" style="padding: 10px; margin: 10px;">
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#commands">Commands</a>
+        <ul class="sidebar" style="padding-left: 10px;">
+            <li><a href="#general">General</a></li>
+            <li><a href="#mod">Moderator</a></li>
+            <li><a href="#admin">Administrator</a></li>
+        </ul>
+        </li>
+        <li><a href="#process">Design Process</a></li>
+        <li><a href="#github">Github</a></li>
+    </ul>
+</aside>
+
+<h1>Utilibot - Moderation</h1>
+
+<section class="aside">
+    <h2 id="abstract">Abstract</h2>
+    <p>Utilibot is a fully-featured moderation bot, whose purpose is to make the task of server moderation
+    easier, more effective, and to increase accountability on the part of the moderation team (making the
+    audit log public is a great way to accomplish this). The bot possesses multiple message filters, designed
+    to take moderation actions automatically, while erring on the side of caution (when in doubt, the user is
+    innocent).</p>
+
+    <h3>Stack</h3>
+    <ul>
+      <li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+      <li><a href="https://github.com/abalabahaha/eris" target="_blank">Eris</a></li>
+      <li><a href="https://www.postgresql.org/" target="_blank">Postgres</a></li>
+    </ul>
+
+    <h2 id="commands">Commands</h2>
+    The bot possesses a multitude of commands, aimed at providing every kind of moderation
+    functionality a server could ever want.
+
+    <h3 id="general">General Commands</h3>
+    Everyone has access to these commands, and are largely related to the bot itself.
+    <p>
+        <h4>!?url</h4>
+        <ul>
+            <li>Messages the user with the bot's OAuth2 invite link.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?commands</h4>
+        <ul>
+            <li>Messages the user with the commands they have permission to access.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?help &lt;command (optional)&gt;</h4>
+        <ul>
+            <li>Posts detailed information about the specified command.</li>
+            <li>If command is omitted, messages the user with generic information about the bot.</li>
+        </ul>
+    </p>
+
+    <h3 id="mod">Moderator Commands</h3>
+    These commands are used to directly moderate the server and its members. Requires
+    the user to either possess the <code>BanMembers</code> permission, or have a role
+    listed in the mod list.
+    <p>
+        <h4>!?ban &lt;user mention&gt; &lt;reason (optional)&gt;</h4>
+        <ul>
+            <li>Bans the mentioned user, messages them informing them, and listing the responsible moderator.</li>
+            <li>If a reason is provided, that is sent to the user as well.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?kick &lt;user mention&gt; &lt;reason (optional)&gt;</h4>
+        <ul>
+            <li>Kicks the mentioned user, messages them informing them, and listing the responsible moderator.</li>
+            <li>If a reason is provided, that is sent to the user as well.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?mute &lt;user mention&gt; &lt;reason (optional)&gt;</h4>
+        <ul>
+            <li>This command requires that an admin designate a role as the Muted role.</li>
+            <li>Mutes the mentioned user, messages them informing them, and listing the responsible moderator.</li>
+            <li>If a reason is provided, that is sent to the user as well.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?unmute &lt;user mention&gt;</h4>
+        <ul>
+            <li>Unmutes the user, and informs them. Does <em>not</em> generate an audit log.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?purge &lt;number of messages&gt; &lt;user mention (optional)&gt;</h4>
+        <ul>
+            <li>Deletes the most recent <code>number</code> messages.</li>
+            <li>If a user is mentioned, it will only delete their messages.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?reason &lt;case number&gt; &lt;reason&gt;</h4>
+        <ul>
+            <li>Updates the reason listed for the given case number.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?getlog &lt;user mention/id&gt;</h4>
+        <ul>
+            <li>Lists every audit log that involves the user specified.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?getcase &lt;case number&gt;</h4>
+        <ul>
+            <li>Retrieves detailed information on the given case number.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?ping</h4>
+        <ul>
+            <li>Pings the bot and shows latency.</li>
+        </ul>
+    </p>
+    <p>
+        <h4>!?stats</h4>
+        <ul>
+            <li>Posts both server-specific and overall stats for the bot.</li>
+        </ul>
+    </p>
+
+    <h3 id="admin">Administrator Commands</h3>
+    These commands are typically used to troubleshoot and setup the bot itself.
+    Requires the user to either possess the <code>ManageServer</code> permission, or
+    have a role listed in the admin list.
+    <p>
+       <h4>!?setup</h4>
+       <ul>
+           <li>Posts the steps necessary to properly configure the bot.</li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?config</h4>
+       <ul>
+           <li>Posts the current configuration status of the bot.</li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?listroles</h4>
+       <ul>
+           <li>Posts every role in the server, along with role IDs.</li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?add &lt;list&gt; &lt;role id&gt;</h4>
+       <ul>
+           <li>Adds a role to the given mod or admin list.</li>
+           <li>Example: <code>!?add mod 239205093537349632</code></li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?remove &lt;list&gt; &lt;role id&gt;</h4>
+       <ul>
+           <li>Removes a role from the given mod or admin list.</li>
+           <li>Example: <code>!?remove mod 239205093537349632</code></li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?set mute &lt;role id&gt;</h4>
+       <ul>
+           <li>Sets the given role as the Muted role (necessary for Muting to work).</li>
+           <li>Example: <code>!?set mute 239205093537349632</code></li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?edit &lt;item&gt; &lt;rsetting&gt;</h4>
+       <ul>
+           <li>Edits the setting for a given filter or log setting.</li>
+           <li>Valid Filters:
+           <ul>
+               <li>MessageSpam (Default: Kick)</li>
+               <li>MentionSpam (Default: Kick)</li>
+               <li>MajorProfanity (Default: Kick)</li>
+               <li>Profanity (Default: Disabled)</li>
+           </ul>
+           </li>
+           <li>Valid Log Settings:
+           <ul>
+               <li>UserJoin</li>
+               <li>UserLeave</li>
+               <li>UserUpdate</li>
+               <li>UserMod</li>
+               <li>MessageDelete</li>
+               <li>MessageEdit</li>
+           </ul>
+           </li>
+           <li>Example: <code>!?edit Profanity Mute</code></li>
+           <li>Example: <code>!?edit UserJoin off</code></li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?setannounce</h4>
+       <ul>
+           <li>Sets the current channel as the one to post bot-related announcements to.</li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?setmodlog</h4>
+       <ul>
+           <li>Sets the current channel as the one to post moderation logs.</li>
+       </ul>
+    </p>
+    <p>
+       <h4>!?setfulllog</h4>
+       <ul>
+           <li>Sets the current channel as the one to post full logs to.</li>
+       </ul>
+    </p>
+
+  <h2 id="process">Design Process</h2>
+</section>
+
+<% include ../../partials/footer %>
+</body>
+</html>
