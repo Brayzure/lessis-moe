@@ -20,19 +20,5 @@ app.set('view engine', 'ejs');
 app.use('/api', api);
 app.use('/', main);
 
-
-
-
-
-
-
-
-
-
-
-app.get('/utilibot', function(req, res) {
-	res.render('pages/docs/utilibot');
-});
-
 app.listen(8080);
 console.log("Ready!");
