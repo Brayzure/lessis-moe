@@ -20,5 +20,5 @@ app.set('view engine', 'ejs');
 app.use('/api', api);
 app.use('/', main);
 
-app.listen(8080);
+app.listen(80);
 console.log("Ready!");

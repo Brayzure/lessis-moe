@@ -25,8 +25,12 @@ router.get('/projects/:project', function(req, res) {
 		res.render(`pages/docs/${site}`);
 	}
 	else {
-		res.sendStatus(404);
+		res.render('pages/404');
 	}
+});
+
+router.get('*', function(req, res) {
+	res.render('pages/404');
 });
 
 module.exports = router;

@@ -4,7 +4,8 @@
   "description": "",
   "main": "web.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "echo \"Compiling stylesheet...\" && myth ./src/myth.css ./src/stylesheet.css"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,11 @@
   },
   "homepage": "lessis.moe",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "ejs": "^2.5.3",
     "express": "^4.14.0",
+    "myth": "github:segmentio/myth#pull/143/head",
+    "pg": "^6.1.0",
     "ws": "^1.1.1"
   }
 }

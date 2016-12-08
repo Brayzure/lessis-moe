@@ -1,6 +1,16 @@
 /*
 * Stylesheet for lessis.moe
 */
+:root {
+	--main-bg: #EFEFEF;
+	--main-text: #0A1612;
+	--nav-bg: #0A1612;
+	--nav-bg-hovor: #555;
+	--nav-text: #EFEFEF;
+	--nax-text-hovor: #EFEFEF;
+	--accent: #3CC47C;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -8,9 +18,9 @@ html, body {
 
 * {
     font-family: Verdana, Geneva, sans-serif;
-    background-color: #333;
-    color: white;
-    text-decoration-color: #FCBD49;
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    text-decoration-color: var(--accent);
 }
 
 ul {
@@ -24,7 +34,8 @@ ul.nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #222;
+    color: var(--nav-text);
+    background-color: var(--nav-bg);
     position: fixed;
     left: 0px;
     top: 0px;
@@ -41,17 +52,21 @@ li.nav a {
     text-align: center;
     padding: 16px;
     text-decoration: none;
-    background-color: #222;
-    border-right: 1px solid #FCBD49;
+    background-color: var(--nav-bg);
+    border-right: 1px solid var(--accent);
 }
 
 li.nav a:hover {
-    background-color: #333;
+    background-color: var(--nav-bg-hovor);
 }
 
 p.footer {
     font-size: 12px;
     text-align: center;
+}
+
+p.footer span {
+	color: var(--accent);
 }
 
 section {
@@ -72,7 +87,7 @@ aside {
     top: 48px;
     width: 220px;
     float: right;
-    border: 2px solid #222;
+    border: 2px solid var(--nav-bg);
     border-radius: 5px;
 }
 
@@ -89,7 +104,7 @@ ul.sidebar li {
 
 ul.sidebar li:before {
     content: "\002022 ";
-    color: #FCBD49;
+    color: var(--accent);
 }
 
 ul.sidebar li a {
@@ -98,29 +113,29 @@ ul.sidebar li a {
 
 code {
     font-family: Lucida Console;
-    background-color: #444;
+    background-color: #AAA;
     padding: 3px;
 }
 
 /* Headings */
 h1 {
     text-align: center;
-    color: #FCBD49;
+    color: var(--accent);
 }
 
 h2 {
     border-bottom-style: solid;
-    border-bottom-color: #FCBD49;
+    border-bottom-color: var(--accent);
 }
 
 h3 {
-    color: #FCBD49;
+    color: var(--accent);
     margin-bottom: 3px;
 }
 
 h4 {
     border-left-style: solid;
-    border-left-color: #FCBD49;
+    border-left-color: var(--accent);
     margin: 0px;
     padding: 0px;
     padding-left: 3px;
