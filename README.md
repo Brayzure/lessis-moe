@@ -11,7 +11,11 @@ Yeah, I chose the domain because I liked the wordplay.
 
 ### Installation
 
-`npm install`
+`npm install` - Installs all packages
+
+`npm run style` - Builds the stylesheet using Myth. If it fails due to an error related to
+the `clone-component` module, then run `npm install -g segmentio/myth#pull/143/head` which
+will install the version that has support for Node v6.
 
 ### Running
 

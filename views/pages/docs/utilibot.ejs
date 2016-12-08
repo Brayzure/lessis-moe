@@ -20,16 +20,18 @@
     </ul>
 </aside>
 
+<div id="abstract"></div>
 <h1>Utilibot - Moderation</h1>
 
 <section class="aside">
-    <h2 id="abstract">Abstract</h2>
+    <h2>Abstract</h2>
     <p>Utilibot is a fully-featured moderation bot, whose purpose is to make the task of server moderation
     easier, more effective, and to increase accountability on the part of the moderation team (making the
     audit log public is a great way to accomplish this). The bot possesses multiple message filters, designed
     to take moderation actions automatically, while erring on the side of caution (when in doubt, the user is
     innocent).</p>
 
+    <div id="commands"></div>
     <h3>Stack</h3>
     <ul>
       <li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
@@ -37,11 +39,12 @@
       <li><a href="https://www.postgresql.org/" target="_blank">Postgres</a></li>
     </ul>
 
-    <h2 id="commands">Commands</h2>
+    <div id="general"></div>
+    <h2>Commands</h2>
     The bot possesses a multitude of commands, aimed at providing every kind of moderation
     functionality a server could ever want.
 
-    <h3 id="general">General Commands</h3>
+    <h3>General Commands</h3>
     Everyone has access to these commands, and are largely related to the bot itself.
     <p>
         <h4>!?url</h4>
@@ -55,6 +58,7 @@
             <li>Messages the user with the commands they have permission to access.</li>
         </ul>
     </p>
+    <div id="mod"></div>
     <p>
         <h4>!?help &lt;command (optional)&gt;</h4>
         <ul>
@@ -63,7 +67,7 @@
         </ul>
     </p>
 
-    <h3 id="mod">Moderator Commands</h3>
+    <h3>Moderator Commands</h3>
     These commands are used to directly moderate the server and its members. Requires
     the user to either possess the <code>BanMembers</code> permission, or have a role
     listed in the mod list.
@@ -126,6 +130,7 @@
             <li>Pings the bot and shows latency.</li>
         </ul>
     </p>
+    <div id="admin"></div>
     <p>
         <h4>!?stats</h4>
         <ul>
@@ -133,7 +138,7 @@
         </ul>
     </p>
 
-    <h3 id="admin">Administrator Commands</h3>
+    <h3>Administrator Commands</h3>
     These commands are typically used to troubleshoot and setup the bot itself.
     Requires the user to either possess the <code>ManageServer</code> permission, or
     have a role listed in the admin list.
@@ -182,10 +187,11 @@
            <li>Edits the setting for a given filter or log setting.</li>
            <li>Valid Filters:
            <ul>
-               <li>MessageSpam (Default: Kick)</li>
-               <li>MentionSpam (Default: Kick)</li>
-               <li>MajorProfanity (Default: Kick)</li>
+               <li>MessageSpam (Default: Delete Message)</li>
+               <li>MentionSpam (Default: Delete Message)</li>
+               <li>MajorProfanity (Default: Delete Message)</li>
                <li>Profanity (Default: Disabled)</li>
+               <li>InviteGuard (Default: Delete Message)</li>
            </ul>
            </li>
            <li>Valid Log Settings:
@@ -214,6 +220,7 @@
            <li>Sets the current channel as the one to post moderation logs.</li>
        </ul>
     </p>
+    <div id="process"></div>
     <p>
        <h4>!?setfulllog</h4>
        <ul>
@@ -221,7 +228,7 @@
        </ul>
     </p>
 
-  <h2 id="process">Design Process</h2>
+  <h2>Design Process</h2>
 </section>
 
 <% include ../../partials/footer %>
