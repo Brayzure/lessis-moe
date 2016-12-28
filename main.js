@@ -29,6 +29,10 @@ router.get('/projects/:project', function(req, res) {
 	}
 });
 
+router.get('/sitemap', function(req, res) {
+	res.sendFile('sitemap.txt', {root: path.join(__dirname, './src')});
+});
+
 router.get('*', function(req, res) {
 	res.render('pages/404');
 });

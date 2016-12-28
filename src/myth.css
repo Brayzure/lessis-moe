@@ -61,6 +61,7 @@ li.nav a:hover {
     background-color: var(--nav-bg-hovor);
 }
 
+/* Footer */
 p.footer {
     font-size: 12px;
     text-align: center;
@@ -68,17 +69,6 @@ p.footer {
 
 p.footer span {
 	color: var(--accent);
-}
-
-section {
-    width: 85%;
-    margin: auto;
-}
-
-section.aside {
-    width: 60%;
-    margin: 0px;
-    margin-left: 10%;
 }
 
 /* Side navbar */
@@ -112,12 +102,6 @@ ul.sidebar li a {
     text-decoration: none;
 }
 
-code {
-    font-family: Lucida Console;
-    background-color: #AAA;
-    padding: 3px;
-}
-
 /* Headings */
 h1 {
     text-align: center;
@@ -140,4 +124,35 @@ h4 {
     margin: 0px;
     padding: 0px;
     padding-left: 3px;
+}
+
+/* Miscellaneous */
+code {
+    font-family: Lucida Console;
+    background-color: #AAA;
+    padding: 3px;
+}
+
+section {
+    width: 85%;
+    margin: auto;
+}
+
+section.aside {
+    width: 60%;
+    margin: 0px;
+    margin-left: 10%;
+}
+
+.announce {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	padding: 0px;
+	margin: 0px;
+	font-weight: bold;
+	text-align: center;
+}
+
+p.announce {
+	padding: 4px;
 }

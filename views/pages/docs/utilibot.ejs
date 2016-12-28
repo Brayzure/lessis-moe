@@ -15,6 +15,13 @@
             <li><a href="#admin">Administrator</a></li>
         </ul>
         </li>
+        <li><a href="#usage">Usage</a>
+        <ul class="sidebar" style="padding-left: 10px;">
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#filters">Filters</a></li>
+            <li><a href="#mutes">Mutes</a></li>
+        </ul>
+        </li>
         <li><a href="#process">Design Process</a></li>
         <li><a href="#github">Github</a></li>
     </ul>
@@ -182,7 +189,7 @@
        </ul>
     </p>
     <p>
-       <h4>!?edit &lt;item&gt; &lt;rsetting&gt;</h4>
+       <h4>!?edit &lt;item&gt; &lt;setting&gt;</h4>
        <ul>
            <li>Edits the setting for a given filter or log setting.</li>
            <li>Valid Filters:
@@ -220,15 +227,52 @@
            <li>Sets the current channel as the one to post moderation logs.</li>
        </ul>
     </p>
-    <div id="process"></div>
+    <div id="usage"></div>
     <p>
        <h4>!?setfulllog</h4>
        <ul>
            <li>Sets the current channel as the one to post full logs to.</li>
        </ul>
     </p>
+    <div id="setup"></div>
 
-  <h2>Design Process</h2>
+    <h2>Usage</h2>
+
+    <h3>Setup</h3>
+    <div id="filters"></div>
+    <p>The bot works immediately upon joining the server, however there is ample customization
+    available. By default, the bot determines command access by the user's permissions within
+    the server. Administrators require <code>ManageServer</code> while moderators require
+    <code>BanMembers</code>. However, you can override this behavior by adding role IDs to
+    the admin and mod listings, with the <code>!?add &lt;list&gt; &lt;role id&gt;</code>
+    command, detailed above.
+    </p>
+
+    <h3>Filters</h3>
+    <p>The bot comes bundled with several filters, designed to delete otherwise unwanted
+    messages. Every filter simply deletes the message by default, with the exception
+    of the Profanity filter, which is disabled. List of filters:</p>
+    <ul>
+    	<li>MessageSpam - Filters messages sent very frequently</li>
+    	<li>MentionSpam - Filters messages that contain very many user/role mentions</li>
+    	<li>InviteGuard - Filters server invites</li>
+    	<li>MajorProfanity - Filters egregious profanity</li>
+    	<li>Profanity - Filters less serious profanity (disabled by default)</li>
+    </ul>
+    <div id="mutes"></div>
+    <p>The settings for every filter can be edited via the <code>!?edit</code> command,
+    detailed above. Valid settings for filters are <code>Off</code>, <code>Delete</code>,
+    <code>Mute</code>, and <code>Kick</code></p>
+
+    <h3>Mutes</h3>
+    <div id="process"></div>
+    <p>Users can be muted, either automatically or via a command, which applies the designated
+    Muted role to the user. It is up to the server staff to properly configure the role
+    to deny typing privileges, as every server is set up differently. While timed mutes are
+    not currently implemented, they will be in the rewrite, which is slated for release upon release
+    of Discord's latest update.</p>
+
+  	<h2>Design Process</h2>
 </section>
 
 <% include ../../partials/footer %>

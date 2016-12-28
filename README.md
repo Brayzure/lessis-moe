@@ -1,4 +1,4 @@
-# lessis.moe v0.2.1
+# lessis.moe v0.3.0
 ## Repo for my personal site
 
 Yeah, I chose the domain because I liked the wordplay.
