@@ -8,7 +8,7 @@
 	--nav-bg-hovor: #555;
 	--nav-text: #EFEFEF;
 	--nav-text-hovor: #EFEFEF;
-	--accent: #228B22;
+	--accent: #008aa6;
 }
 
 html, body {
@@ -124,6 +124,17 @@ h4 {
     margin: 0px;
     padding: 0px;
     padding-left: 3px;
+}
+
+/* Logo */
+.logo {
+	display: block;
+	margin: auto;
+}
+
+svg {
+	fill: var(--accent);
+	color: var(--accent);
 }
 
 /* Miscellaneous */

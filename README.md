@@ -1,4 +1,4 @@
-# lessis.moe v0.3.0
+# lessis.moe v0.3.1
 ## Repo for my personal site
 
 Yeah, I chose the domain because I liked the wordplay.
@@ -7,7 +7,6 @@ Yeah, I chose the domain because I liked the wordplay.
 - [Node.js](https://nodejs.org/) - Web Server
 - [EJS](http://ejs.co/) - Render Engine
 - [Myth](http://www.myth.io/) - CSS Preprocessor
-- [WS](https://websockets.github.io/ws/) - Websocket Implementation
 
 ### Installation
 
