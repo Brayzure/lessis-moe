@@ -4,6 +4,7 @@
 
 var express = require('express');
 var path = require('path');
+var meta = require('./src/resources/metadata.json');
 var router = express.Router();
 
 var projects = [
@@ -12,20 +13,25 @@ var projects = [
 ]
 
 router.get('/', function(req, res) {
-	res.render('pages/main');
+	let m = meta.default;
+	res.render('pages/main', m);
 });
 
 router.get('/projects', function(req, res) {
-	res.render('pages/projects');
+	let m = meta.projects;
+	res.render('pages/projects', m);
 });
 
 router.get('/projects/:project', function(req, res) {
 	let site = req.params.project.toLowerCase();
+	let m = meta['projects-' + req.params.project] || meta.default;
 	if(~projects.indexOf(site)) {
-		res.render(`pages/docs/${site}`);
+		res.render(`pages/docs/${site}`, m);
 	}
 	else {
-		res.render('pages/404');
+		m = meta.default;
+		m.url = "";
+		res.render('pages/404', m);
 	}
 });
 
@@ -34,7 +40,9 @@ router.get('/sitemap', function(req, res) {
 });
 
 router.get('*', function(req, res) {
-	res.render('pages/404');
+	let m = meta.default;
+	m.url = "";
+	res.render('pages/404', m);
 });
 
 module.exports = router;

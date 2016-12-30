@@ -1,0 +1,32 @@
+{
+	"default": {
+		"title": "Less Is More",
+		"type": "website",
+		"webUrl": "http://lessis.moe/",
+		"description": "Homepage for the developer Tyler Ricketts (Brayzure) and his projects."
+	},
+	"projects": {
+		"title": "Less Is More - Projects",
+		"type": "website",
+		"webUrl": "http://lessis.moe/projects/",
+		"description": "Project listing for the developer Tyler Ricketts (Brayzure)."
+	},
+	"projects-utilibot": {
+		"title": "Less Is More - Utilibot",
+		"type": "website",
+		"webUrl": "http://lessis.moe/projects/utilibot",
+		"description": "Detailed documentation for the Utilibot moderation bot, a powerful moderation-focused bot for the Discord platform."
+	},
+	"projects-site": {
+		"title": "Less Is More - Site",
+		"type": "website",
+		"webUrl": "http://lessis.moe/projects/site",
+		"description": "Detailed information on the development of http://lessis.moe, the home page of the developer Tyler Ricketts (Brayzure)."
+	},
+	"about": {
+		"title": "Less Is More - About",
+		"type": "website",
+		"webUrl": "http://lessis.moe/about",
+		"description": "Information related to the developer Tyler Ricketts (Brayzure)."
+	}
+}
